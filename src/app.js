@@ -12,20 +12,18 @@ document.addEventListener('DOMContentLoaded', () => {
       ],
         newItem: ''
     },
-
     methods: {
       saveNewItem: function (e) {
       e.preventDefault();
-      this.item.push({
+      this.items.push({
         name: this.newItem,
         done: false
       });
-      this.newItem = ''
+      this.newItem = '';
     },
     doItem: function (index) {
-      this.items(index).done = true;
+      this.items[index].done = true;
       }
     }
-  }
-)
-})
+  });
+});
